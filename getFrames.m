@@ -13,13 +13,13 @@ v = VideoReader(filename);
 %calculate how many frames we are going to use.
 %don't specify whichframes, so let's use all of them
 if nargin < 3
-whichframes = 1:v.NumberOfFrames;
+whichframes = 1:(v.Duration*v.frameRate); 
 end
 nframes = length(whichframes);
 
 %if we don't specify which channels, provide all channels. 
 if nargin <2
-    channels = [1 2 3];
+    channels = logical([1 1 1]); 
 end
 
 
@@ -28,9 +28,10 @@ end
 frames = zeros(v.Height,v.Width,length(channels),nframes,'uint8'); 
 framerate = v.FrameRate;
 tic
-for i=1:numframes
+for i=1:nframes
     fr = readFrame(v);
-    frames(:,:,:,i) = fr(:,:,channels,i);  
+    frames(:,:,:,i) = fr(:,:,channels);  
 end
 toc
 end
+
