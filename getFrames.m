@@ -1,9 +1,11 @@
 %Reads in a filename
-%returns an array that is h,w,chan,t
+%returns an array that is [h,w,chan,t]
 % h=height
 % w=with
 % chan = number channels
 % t= time periods
+
+%used by other functions 
 
 function [frames, framerate] = getFrames(filename,channels,whichframes) 
 v = VideoReader(filename);

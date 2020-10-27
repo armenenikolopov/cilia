@@ -1,0 +1,11 @@
+%plot frequency/power histogram for two diff movies, analyzing only spatial
+%window. Most obviously useful in looking at two movies where it['s the
+%same set of cells but two conditions.
+plotKOandRescueFFT_andROIs;
+
+
+%Show mean optical flow over time
+plotMeanFlowTimeline;
+
+
+a

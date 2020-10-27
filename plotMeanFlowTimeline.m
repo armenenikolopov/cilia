@@ -4,8 +4,11 @@
 %this code uses both opticflowHS and opticflow, and I don't yet know
 %the difference. 
 
-hbounds = [300,500];
-wbounds = [200,300]; 
+%hbounds = [300,500];
+%wbounds = [200,300]; 
+
+hbounds = [1 ,581];
+wbounds= [1,739]; 
 frames = getFrames("data/KO.avi",2,1:20);
 frames = cutoutFrames(frames,hbounds(1):hbounds(2),wbounds(1):wbounds(2));
 

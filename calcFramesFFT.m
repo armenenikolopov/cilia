@@ -1,3 +1,5 @@
+%fft of images, used by plotKO)andRescueFFT_andROI
+
 function [f,p]=calcFramesFFT(frames,Fs)
 
 framesSquashed = squashFirstTwoDimensions(frames);

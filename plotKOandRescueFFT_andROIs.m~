@@ -1,7 +1,4 @@
-%Prints FFT of two files for comparison - KO.avi and KO+cGMP_.avi. 
-%Becuase of significant blurring in different parts of the images, allows
-%you to specify bounds over which to do the analysis, an ROI window,
-%specified by hbounds and wbounds. 
+%Prints ROI 
 
 hbounds = [300,500];
 wbounds = [200,300]; 
